@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+ 
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5e9e1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.dashboard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+}
+.balance {
+    background-color: #f26b5e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.balance .amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: #c4bcbc;
+    border-radius: 10px;
+    position: relative;
+}
+.toggle::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #f26b5e;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
+}
+.spending {
+    padding: 20px;
+}
+.spending h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #333;
+}
+.bar-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    margin-bottom: 5px;
+}
+.bar {
+    width: 28px;
+    background-color: #f26b5e;
+    border-radius: 5px;
+}
+.bar.wed {
+    background-color: #5ec8f2;
+}
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+}
+.bar-label {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    
+}
+.total .change {
+    font-size: 10px;
+    color: #b4b4b4;
+}
+
+      </style>
+  </head>
+  <body>
+<div>    
+  <div class="balance">
+    <div>
+      <div>My balance</div>
+      <div class="amount">$921.48</div>
+    </div>
+    <div class="toggle"></div>
+</div>
+  <div class="dashboard">
+      
+      <div class="spending">
+          <h2>Spending – Last 7 days</h2>
+          <div class="bar-chart">
+              <div class="bar" style="height: 40px;"></div>
+              <div class="bar" style="height: 60px;"></div>
+              <div class="bar wed" style="height: 80px;"></div>
+              <div class="bar" style="height: 50px;"></div>
+              <div class="bar" style="height: 70px;"></div>
+              <div class="bar" style="height: 50px;"></div>
+              <div class="bar" style="height: 40px;"></div>
+          </div>
+          <div class="bar-labels">
+              <div class="bar-label">mon</div>
+              <div class="bar-label">tue</div>
+              <div class="bar-label">wed</div>
+              <div class="bar-label">thu</div>
+              <div class="bar-label">fri</div>
+              <div class="bar-label">sat</div>
+              <div class="bar-label">sun</div>
+          </div>
+          <hr style="margin:20px 0px; opacity: 0.3;">
+         <div> 
+            <div class="total">
+            <div class="change">Total this month</div>
+            
+            <div class="total" style="font-size:medium;">+2.4% </div>
+        </div>
+        <div class="total">
+          <div style="font-size:xx-large;">$478.33</div>
+          <div class="change">from last month</div>
+        </div>
+      </div>
+          
+      </div>
+  </div></div>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ashraf Nasr</a>.
+  </div>
+</body>
+</html>
